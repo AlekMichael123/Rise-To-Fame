@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: slateblue;
+}
+
+img {
+    visibility: hidden;
+}
+
+:root {
+    --animationValue1: 100px;
+    --animationValue2: 200px;
+
+    --animationValue3: 400px;
+    --animationValue4: 625px;
+    --animationValue5: 900px;
+
+    --cursor-style: default;
+}
+
+#main-screen {
+    --border-style: solid; 
+    border: 5px var(--border-style) lightgreen;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    --dimension: 800px;
+    width: var(--dimension);
+    height: var(--dimension);
+    
+    border-radius: var(--animationValue1) var(--animationValue2) var(--animationValue1) var(--animationValue2) /
+                   var(--animationValue2) var(--animationValue1) var(--animationValue2) var(--animationValue1);
+    animation: wobble 30s ease-in-out alternate infinite;
+
+    cursor: var(--cursor-style);
+}
+  
+@keyframes wobble {
+    50% {
+      border-radius: var(--animationValue2) var(--animationValue3) var(--animationValue4) var(--animationValue2) /
+                     var(--animationValue4) var(--animationValue2) var(--animationValue3) var(--animationValue5);
+    }
+    100% {
+      border-radius: var(--animationValue2) var(--animationValue1) var(--animationValue2) var(--animationValue1) /
+                     var(--animationValue1) var(--animationValue2) var(--animationValue1) var(--animationValue2);
+    }
+}
