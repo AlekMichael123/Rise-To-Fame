@@ -10,13 +10,6 @@ img {
 }
 
 :root {
-    --animationValue1: 100px;
-    --animationValue2: 200px;
-
-    --animationValue3: 400px;
-    --animationValue4: 625px;
-    --animationValue5: 900px;
-
     --cursor-style: default;
 }
 
@@ -32,20 +25,8 @@ img {
     width: var(--dimension);
     height: var(--dimension);
     
-    border-radius: var(--animationValue1) var(--animationValue2) var(--animationValue1) var(--animationValue2) /
-                   var(--animationValue2) var(--animationValue1) var(--animationValue2) var(--animationValue1);
-    animation: wobble 30s ease-in-out alternate infinite;
+    border-radius: 20%;
 
     cursor: var(--cursor-style);
 }
   
-@keyframes wobble {
-    50% {
-      border-radius: var(--animationValue2) var(--animationValue3) var(--animationValue4) var(--animationValue2) /
-                     var(--animationValue4) var(--animationValue2) var(--animationValue3) var(--animationValue5);
-    }
-    100% {
-      border-radius: var(--animationValue2) var(--animationValue1) var(--animationValue2) var(--animationValue1) /
-                     var(--animationValue1) var(--animationValue2) var(--animationValue1) var(--animationValue2);
-    }
-}

@@ -35,6 +35,6 @@ export default class Cursor {
   }
 
   statusTest() {
-    console.log({ x: this.x, y: this.y });
+    // console.log({ x: this.x, y: this.y });
   }
 }
